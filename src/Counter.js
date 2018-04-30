@@ -9,12 +9,14 @@ class Counter extends Component {
     // this.setState({
     //   count:this.state.count + 1
     // });
+    this.props.dispatch({ type: 'INCREMENT'});
   }
 
   decrement = () => {
     // this.setState({
     //   count:this.state.count - 1
     // });
+    this.props.dispatch({ type: 'DECREMENT'});
   }
 
   render() {
@@ -31,10 +33,10 @@ class Counter extends Component {
   }
 }
 
-function mapStateToProps(state){
+function mapStateToPropsFunc(state){
   return{
     count:state.count
   };
 }
 
-export default connect(mapStateToProps)(Counter);
+export default connect(mapStateToPropsFunc)(Counter);
