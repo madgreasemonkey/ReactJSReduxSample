@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';Lo
 import Counter from './Counter.js';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 // import './App.css';
+import LoginForm from './LoginForm.js';
 
 const initialState = {
   count:0
@@ -28,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <Provider store = {store}a>
-        <Counter/>
+        <LoginForm/>
       </Provider>
     );
   }
