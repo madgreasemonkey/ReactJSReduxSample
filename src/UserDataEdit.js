@@ -35,7 +35,7 @@ export default class UserDataEdit extends Component{
 
   render(){
     return(
-      <div>
+      <div className="container">
         <form onSubmit={this._saveInfo}>
           <label><b>Name</b></label>
           <input className="input"
