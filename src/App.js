@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 // import './App.css';
 import LoginForm from './LoginForm.js';
+import UserDataEdit from './UserDataEdit.js';
 
 const initialState = {
   count:0
@@ -29,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <Provider store = {store}a>
-        <LoginForm/>
+        <UserDataEdit/>
       </Provider>
     );
   }
