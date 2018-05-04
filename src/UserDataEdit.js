@@ -67,6 +67,45 @@ export default class UserDataEdit extends Component{
           <br/>
           <button type = "submit">Save</button>
         </form>
+        <table style={{
+          width:"100%",
+          height:"50%",
+          color:'#000',
+        }}>
+        <tr>
+          <th><label><b>Name</b></label>
+          </th>
+          <td><input className="input"
+             type="text"
+             placeholder="Enter Name"
+             name="name" required
+             onChange={this._handleInputChange}/></td>
+        </tr>
+        <tr>
+          <th><label><b>Phone Number</b></label></th>
+          <td><input className="input"
+             type="text"
+             placeholder="Enter Phone Number"
+             name="phone_number" required
+             onChange={this._handleInputChange}/></td>
+        </tr>
+        <tr>
+          <th><label><b>Address</b></label></th>
+          <td><input className="input"
+             type="text"
+             placeholder="Enter Address"
+             name="address" required
+             onChange={this._handleInputChange}/></td>
+        </tr><tr>
+          <th><label><b>{"Kid's Name"}</b></label></th>
+          <td><input className="input"
+             type="text"
+             placeholder="Enter Your kid's name"
+             name="kids_name" required
+             onChange={this._handleInputChange}/></td>
+        </tr>
+
+        </table>
       </div>
     );
   }
