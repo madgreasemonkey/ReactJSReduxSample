@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <Provider store = {store}a>
-        <UserDataEdit/>
+        <LoginForm/>
       </Provider>
     );
   }

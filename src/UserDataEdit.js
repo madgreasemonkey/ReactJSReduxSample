@@ -36,37 +36,6 @@ export default class UserDataEdit extends Component{
   render(){
     return(
       <div className="container">
-        <form onSubmit={this._saveInfo}>
-          <label><b>Name</b></label>
-          <input className="input"
-             type="text"
-             placeholder="Enter Name"
-             name="name" required
-             onChange={this._handleInputChange}/>
-          <br/>
-          <label><b>Phone Number</b></label>
-          <input className="input"
-             type="text"
-             placeholder="Enter Phone Number"
-             name="phone_number" required
-             onChange={this._handleInputChange}/>
-          <br/>
-          <label><b>Address</b></label>
-          <input className="input"
-             type="text"
-             placeholder="Enter Address"
-             name="address" required
-             onChange={this._handleInputChange}/>
-          <br/>
-          <label><b>{"Kid's Name"}</b></label>
-          <input className="input"
-             type="text"
-             placeholder="Enter Your kid's name"
-             name="kids_name" required
-             onChange={this._handleInputChange}/>
-          <br/>
-          <button type = "submit">Save</button>
-        </form>
         <table style={{
           width:"100%",
           height:"50%",
@@ -110,3 +79,35 @@ export default class UserDataEdit extends Component{
     );
   }
 }
+
+// <form onSubmit={this._saveInfo}>
+//   <label><b>Name</b></label>
+//   <input className="input"
+//      type="text"
+//      placeholder="Enter Name"
+//      name="name" required
+//      onChange={this._handleInputChange}/>
+//   <br/>
+//   <label><b>Phone Number</b></label>
+//   <input className="input"
+//      type="text"
+//      placeholder="Enter Phone Number"
+//      name="phone_number" required
+//      onChange={this._handleInputChange}/>
+//   <br/>
+//   <label><b>Address</b></label>
+//   <input className="input"
+//      type="text"
+//      placeholder="Enter Address"
+//      name="address" required
+//      onChange={this._handleInputChange}/>
+//   <br/>
+//   <label><b>{"Kid's Name"}</b></label>
+//   <input className="input"
+//      type="text"
+//      placeholder="Enter Your kid's name"
+//      name="kids_name" required
+//      onChange={this._handleInputChange}/>
+//   <br/>
+//   <button type = "submit">Save</button>
+// </form>
