@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { Router, Route, hashHistory } from 'react-router';
+// import { Router, Route } from 'react-router';
+// import { browserHistory } from 'react-router';
+// import { hashHistory } from 'react-router';
+import  { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render((
-  <Router history = {hashHistory}>
-    <Route path="/" component={App}/>
-  </Router>
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>
 ), document.getElementById('root'));
 registerServiceWorker();

@@ -4,8 +4,13 @@ import Counter from './Counter.js';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 // import './App.css';
-import LoginForm from './LoginForm.js';
+import LoginForm from './components/pages/LoginForm.js';
 import UserDataEdit from './UserDataEdit.js';
+// import Header from './components/headerComponent/header';
+// import Footer from './components/footerComponent/footer';
+import HomePage from './components/pages/HomePage';
+import LoginPage from './components/pages/LoginPage';
+import { Route } from 'react-router-dom';
 
 const initialState = {
   count:0
@@ -29,9 +34,11 @@ const store = createStore(reducerFunc);
 class App extends Component {
   render() {
     return (
-      <Provider store = {store}a>
-        <LoginForm/>
-      </Provider>
+      <div>
+        <Route  path="/" exact component={HomePage}/>
+        <Route path="/login" exact component={LoginPage}/>
+        <Route path="/loginForm" exact component={LoginForm}/>
+      </div>
     );
   }
 }
@@ -39,3 +46,9 @@ class App extends Component {
 
 
 export default App;
+
+
+// <Provider store = {store}a>
+//   <LoginForm/>
+//   <Header/>
+// </Provider>
