@@ -1,36 +1,44 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';Lo
-import Counter from './Counter.js';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-// import './App.css';
+import { combineReducers, createStore } from 'redux';
 import LoginForm from './components/pages/LoginForm.js';
 import UserDataEdit from './UserDataEdit.js';
 // import Header from './components/headerComponent/header';
 // import Footer from './components/footerComponent/footer';
+// import logo from './logo.svg';Lo
+// import Counter from './Counter.js';
+// import { Provider } from 'react-redux';
+// import './App.css';
 import HomePage from './components/pages/HomePage';
 import LoginPage from './components/pages/LoginPage';
+import loginReducer from './reducers/loginReducer';
+import userReducer from './reducers/userReducer';
 import { Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const initialState = {
   count:0
 };
 
-function reducerFunc(state = initialState,action){
-  switch(action.type) {
-    case 'INCREMENT':
-      return {
-        count: state.count + 1
-      };
-    case 'DECREMENT':
-      return {
-        count: state.count - 1
-      };
-    default:
-      return state;
+
+
+
+
+const allReducers = combineReducers({
+  login: loginReducer,
+  user: userReducer
+});
+
+const store = createStore(
+  allReducers,
+  window.devToolsExtension & window.devToolsExtension()
+);
+
+const action = {
+  type: 'changeState',
+  payload: {
+    newState: 'New state'
   }
-}
-const store = createStore(reducerFunc);
+};
 class App extends Component {
   render() {
     return (
@@ -38,6 +46,7 @@ class App extends Component {
         <Route  path="/" exact component={HomePage}/>
         <Route path="/login" exact component={LoginPage}/>
         <Route path="/loginForm" exact component={LoginForm}/>
+        <Route path="/userDataEdit" exact component={UserDataEdit}/>
       </div>
     );
   }
